@@ -79,12 +79,13 @@ if __name__ == "__main__":
     episodicRewards, agent = getRewardProgress(task, learningMethod , nrStages=100)
 
     #episodicRewards = getRepresentatiVeEpRewards(task, 'EL1', nrstages=16000, nrRuns=16, repMethod='median',nrParellel=8)
-    np.save('episodicRewards', episodicRewards)
+    #np.save('episodicRewards', episodicRewards)
 
     #plt.plot(angles*180/math.pi)
 
 
-    agent.saveVideo('../Videos/' + task + '-'+ learningMethod + '.avi',3)
+    #agent.saveVideo('../Videos/' + task + '-'+ learningMethod + '.avi',3)
+    agent.play(3)
     plt.plot(episodicRewards, '.')
     plt.legend()
     plt.xlabel('Number of Episodes')
